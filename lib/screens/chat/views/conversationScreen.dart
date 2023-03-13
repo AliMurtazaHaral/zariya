@@ -15,7 +15,6 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:uuid/uuid.dart';
 import '../../../services/database.dart';
-import '../../../utils/fonts.dart';
 import '../widget/widgets.dart';
 
 class ConversationScreen extends StatefulWidget {
@@ -287,11 +286,11 @@ class _ConversationScreenState extends State<ConversationScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.userName),
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xFF3eb489),
       ),
       body: Container(
         height: MediaQuery.of(context).size.height * 1,
-        color: secondaryColor,
+        color: Colors.white,
         child: Container(
           child: Stack(
             children: [
@@ -303,7 +302,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
                 alignment: Alignment.bottomCenter,
                 width: MediaQuery.of(context).size.width,
                 child: Container(
-                  color: Colors.white,
+                  color: Colors.grey,
                   padding:
                       EdgeInsets.symmetric(horizontal: 25.0, vertical: 16.0),
                   child: Row(
@@ -340,10 +339,10 @@ class _ConversationScreenState extends State<ConversationScreen> {
                                   end: FractionalOffset.bottomRight),
                               borderRadius: BorderRadius.circular(40)),
                           child: Image.asset(
-                            "assets/images/send.png",
+                            "assets/send.png",
                             height: 30,
                             width: 30,
-                            color: primaryColor,
+                            color: Colors.white,
                           ),
                         ),
                       ),
@@ -394,8 +393,8 @@ class MessageTile extends StatelessWidget {
                           bottomRight: Radius.circular(23)),
                   gradient: LinearGradient(
                     colors: sendByMe
-                        ? [const Color(0xff000000), const Color(0xff000000)]
-                        : [const Color(0xff000000), const Color(0xff000000)],
+                        ? [const Color(0xFF3eb489), const Color(0xff000000)]
+                        : [const Color(0xFF3eb489), const Color(0xff000000)],
                   )),
               child: Text(message,
                   textAlign: TextAlign.start, style: chatRoomTileStyle()),

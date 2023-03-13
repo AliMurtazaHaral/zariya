@@ -42,6 +42,12 @@ dependencies:
   cloud_firestore:
   fluttertoast:
   image_picker:
+  bottom_navy_bar:
+  permission_handler:
+  firebase_messaging:
+  flutter_local_notifications: 9.6.0
+  uuid:
+  get:
 
 dev_dependencies:
   flutter_test:

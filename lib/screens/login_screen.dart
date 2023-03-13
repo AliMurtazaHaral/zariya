@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:zariya/screens/person_dashboard/dashboard_screen.dart';
 import 'package:zariya/screens/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -174,6 +175,7 @@ class _LoginScreenState extends State<LoginScreen> {
         .signInWithEmailAndPassword(email: email, password: password)
         .then((uid) => {
       Fluttertoast.showToast(msg: "Login Successful"),
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>Dashboard())),
     })
         .catchError((e) {
       Fluttertoast.showToast(msg: "Login is not successful");

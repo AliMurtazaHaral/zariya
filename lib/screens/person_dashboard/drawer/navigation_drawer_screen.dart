@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import 'package:zariya/screens/person_dashboard/home_screen.dart';
+import 'package:zariya/screens/person_dashboard/inbox_screen.dart';
 import '../../../models/user_model.dart';
 import '../../splash_screen.dart';
 import 'drawer_item.dart';
@@ -37,7 +38,7 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
   Widget build(BuildContext context) {
     return Drawer(
       child: Material(
-        color: Colors.black,
+        color:Color(0xFF3eb489),
         child: Padding(
           padding: const EdgeInsets.fromLTRB(24.0, 80, 24, 0),
           child: Column(
@@ -56,7 +57,7 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
                   name: 'Profile',
                   icon: Icons.account_box_rounded,
                   onPressed: (){
-
+                   Navigator.push(context, MaterialPageRoute(builder: (context)=>InboxScreen()));
                   }
               ),
               const SizedBox(height: 30,),
