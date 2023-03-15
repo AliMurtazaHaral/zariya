@@ -7,6 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:zariya/screens/login_screen.dart';
 import 'package:zariya/screens/select_category_screen.dart';
 import 'package:zariya/screens/signup_screen.dart';
+import 'person_dashboard/dashboard_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -149,8 +150,9 @@ class _SplashScreenState extends State<SplashScreen> {
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 minWidth: MediaQuery.of(context).size.width * 0.8,
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>SelectCategoryScreen()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Dashboard_Screen()));
                 },
+                //SelectCategoryScreen()
                 child: const Text(
                   "Get Started",
                   textAlign: TextAlign.center,
