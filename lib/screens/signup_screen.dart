@@ -205,12 +205,12 @@ class _SignupScreenState extends State<SignupScreen> {
             Column(
               children: [
                 SizedBox(
-                  height: MediaQuery.of(context).size.height*.1,
+                  height: MediaQuery.of(context).size.height*.01,
                 ),
                 const Align(
-                  alignment: Alignment.centerLeft,
+                  alignment: Alignment.center,
                   child: Padding(
-                    padding: EdgeInsets.only(left: 20),
+                    padding: EdgeInsets.only(left: 0),
                     child: Text(
                       'Create Your Account',
                       style: TextStyle(
@@ -218,28 +218,32 @@ class _SignupScreenState extends State<SignupScreen> {
                     ),
                   ),
                 ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height*.01,
+                ),
                 Padding(
                   padding: EdgeInsets.fromLTRB(40, 0, 40, 0),
                   child: Column(
                     children: [ Material(
                       elevation: 5,
-                      borderRadius: BorderRadius.circular(50),
+                      borderRadius: BorderRadius.circular(80),
                       color: Colors.white,
                       child: MaterialButton(
                           padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                          minWidth: MediaQuery.of(context).size.width * 0.2,
-                          height: 70,
+                          minWidth: MediaQuery.of(context).size.width * 0.4,
+                          height: MediaQuery.of(context).size.height * 0.2,
                           onPressed: () async {
                             _getFromGallery();
                           },
+
                           child: Column(children: [
-                            imageFile==null? Icon(Icons.person, size: 35, color: Colors.black,) :ClipRRect(
+                            imageFile==null? Icon(Icons.person, size: 150, color: Colors.black,) :ClipRRect(
                               borderRadius: BorderRadius.circular(500.0),
                               child: Image.file(
                                 imageFile!,
                                 fit: BoxFit.cover,
-                                height: 70,
-                                width: 70,
+                                height: MediaQuery.of(context).size.width * 0.4,
+                                width: MediaQuery.of(context).size.height * 0.2,
                               ),
                             ),
 

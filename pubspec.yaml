@@ -42,9 +42,6 @@ dependencies:
   cloud_firestore:
   fluttertoast:
   image_picker:
-  easy_search_bar:
-  file_picker:
-  permission_handler:
 
 dev_dependencies:
   flutter_test:
